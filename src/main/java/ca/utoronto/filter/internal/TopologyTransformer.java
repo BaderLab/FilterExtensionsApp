@@ -102,7 +102,6 @@ public class TopologyTransformer  extends AbstractTransformer<CyNetwork, CyIdent
 		
 		seen.put(node, null);
 		for (CyEdge edge : network.getAdjacentEdgeIterable(node, Type.ANY)) {
-			getNeighbours(network, edge.getSource(), distance - 1, seen);
 			getNeighbours(network, edge.getTarget(), distance - 1, seen);
 		}
 	}
